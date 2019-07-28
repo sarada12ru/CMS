@@ -22,7 +22,6 @@ PreparedStatement pst = conn.cn.prepareStatement("select * from student where co
 pst.setString(1, course);
 pst.setString(2,semester);
 ResultSet rs = pst.executeQuery();
-int row =0;
 %>
 <body>
     <jsp:include page="includes/nav.jsp" />
@@ -42,6 +41,7 @@ int row =0;
             			<%
             			while(rs.next())
             			{
+            				int row =0;
             				ResultSet rs1 = dao.getAttendanceStudent(rs.getString("serial"), rs.getString("semester"));   
                         	while(rs1.next())
                         	{

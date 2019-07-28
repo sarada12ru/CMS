@@ -36,8 +36,10 @@ public class RegisterFaculty extends HttpServlet
 		try 
 		{
 			rs = dao.getFaculty();
-			row = rs.getRow();
-			row = row+1;
+			while(rs.next())
+			{
+				row = row + 1;
+			}
 			empid = dept+"/"+year+"/0"+row;
 			username = empid;
 			password = name.substring(0,5)+year+row;

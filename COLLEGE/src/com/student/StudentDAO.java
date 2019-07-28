@@ -1,10 +1,9 @@
 package com.student;
 
 import java.sql.PreparedStatement;
+import com.all.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.admin.Connections;
 
 public class StudentDAO 
 {

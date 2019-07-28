@@ -1,5 +1,6 @@
 package com.admin;
 
+import com.all.*;
 import java.sql.*;
 
 public class AdminDAO 

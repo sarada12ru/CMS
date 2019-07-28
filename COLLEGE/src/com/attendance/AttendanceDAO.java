@@ -1,8 +1,8 @@
 package com.attendance;
 
 import java.sql.*;
+import com.all.*;
 
-import com.admin.Connections;
 
 public class AttendanceDAO 
 {

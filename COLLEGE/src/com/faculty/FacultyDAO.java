@@ -1,9 +1,10 @@
 package com.faculty;
 
 import java.sql.PreparedStatement;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import com.admin.Connections;
+import com.all.*;
 
 public class FacultyDAO 
 {

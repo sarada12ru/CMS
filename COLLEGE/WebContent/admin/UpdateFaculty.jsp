@@ -48,7 +48,7 @@
                         </select>
                         <div class="form-group">
                             <label for="">Status</label>
-                            <input type="text" name="status" value="RETIRED" class="form-control">
+                            <input type="text" name="status" value="RETIRED" class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Update Status" class="btn btn-primary" style="width:49%">
