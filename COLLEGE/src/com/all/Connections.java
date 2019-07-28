@@ -1,4 +1,4 @@
-package com.faculty;
+package com.all;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import oracle.jdbc.OracleDriver;
 
 public class Connections 
 {
-	Connection cn ;
+	public Connection cn ;
 	OracleDriver dr;
 	public void conn() throws SQLException
 	{
