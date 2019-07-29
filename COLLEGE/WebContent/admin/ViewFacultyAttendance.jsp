@@ -1,5 +1,6 @@
 <%@page import="com.attendance.*" %>
 <%@page import="java.sql.*" %>
+<%@page import="com.all.*" %>
 <html>
 <head>
     <jsp:include page="includes/header.jsp" />
@@ -19,8 +20,6 @@
         <div class="container">
             <div class="row">
             <%
-            Connections conn = new Connections();
-            conn.conn();
             AttendanceDAO dao = new AttendanceDAO();
             ResultSet rs = dao.getFaculty();
             %>

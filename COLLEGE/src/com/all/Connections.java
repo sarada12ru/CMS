@@ -4,15 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import oracle.jdbc.OracleDriver;
 
 public class Connections 
 {
 	public Connection cn ;
-	OracleDriver dr;
 	public void conn() throws SQLException
 	{
-		dr = new OracleDriver();
-		cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","college","prasad");
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			cn = DriverManager.getConnection("jdbc:mysql://localhost:3333/college","root","prasad");
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			e.printStackTrace();
+		}
 	}
 }

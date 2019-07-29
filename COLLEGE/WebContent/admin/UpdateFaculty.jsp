@@ -26,10 +26,8 @@
             }
             %>
                 <%
-                Connections conn = new Connections();
-                conn.conn();
             	AdminDAO dao = new AdminDAO();
-            	ResultSet rs = dao.getFaculty();
+            	ResultSet rs = dao.getFacultyStatus();
                 %>
                 <h1 Style="font-family:Baskerville BOLD BT">Update Faculty</h1>
                 <form action="../UpdateFaculty" method="post">
