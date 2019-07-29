@@ -122,6 +122,15 @@ public class AdminDAO
 		rs = pst.executeQuery();
 		return rs;
 	}
+	public ResultSet getFacultyStatus() throws SQLException
+	{
+		conn = new Connections();
+		conn.conn();
+		pst = conn.cn.prepareStatement("select * from faculty where status = ?");
+		pst.setString(1, "APPOINTED");
+		rs = pst.executeQuery();
+		return rs;
+	}
 	public ResultSet getFaculty(String empid) throws SQLException
 	{
 		conn = new Connections();
@@ -163,7 +172,7 @@ public class AdminDAO
 	{
 		conn = new Connections();
 		conn.conn();
-		pst = conn.cn.prepareStatement("update notice set notice  = ?");
+		pst = conn.cn.prepareStatement("insert into notice (notice)  values(?)");
 		pst.setString(1,notice);
 		ret = pst.executeUpdate();
 		return ret;
